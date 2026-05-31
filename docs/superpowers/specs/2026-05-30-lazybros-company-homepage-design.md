@@ -159,15 +159,16 @@ The app-specific folder model must support separate terms for each app. For `주
 
 Brand:
 
-- Logo mark: the LazyBros glasses image from `design-components-all/Lazybros_image`, reused for the header mark, browser tab icon, and mobile home screen icons.
+- Logo mark: `KakaoTalk_Photo_2026-05-31-14-16-55 004.png` from `design-components-all/Lazybros_image`, reused for the header mark, browser tab icon, and mobile home screen icons.
 - Text: `LazyBros Company`
 
 Navigation:
 
 - Company
-- Apps
 - Policies
 - Contact
+
+The shared header stays fixed at the top while scrolling on both the homepage and app policy pages. Anchor links include enough scroll offset so section titles remain visible below the header.
 
 Behavior:
 
@@ -250,6 +251,12 @@ Scalable app directory:
 - Include app search, state/category filters, visible app count, app status, category, update date, and direct policy actions.
 - For `주차기록`, expose `개인정보`, `권한 안내`, and `광고 안내` links from the directory row.
 
+### Contact
+
+- Show `LazyBros Company` with the adjacent tagline `Lazy doesn't mean Stupid`.
+- Align the tagline so its right edge visually tracks with the contact description line on desktop.
+- Keep `lazybroscompany@gmail.com` as the primary mail action.
+
 ### Footer
 
 Required content:
@@ -257,10 +264,7 @@ Required content:
 - `LazyBros Company | lazybroscompany@gmail.com`
 - `Copyright(c) 2026 LazyBros company All rights reserved`
 
-Footer secondary links:
-
-- `주차기록 개인정보처리방침`
-- `app-ads.txt`
+No secondary footer links are shown. App policy and `app-ads.txt` access remain available from their purpose-built sections and direct file paths.
 
 ## 8. 주차기록 Privacy Policy Content Requirements
 
@@ -474,6 +478,6 @@ When implementation begins, avoid modifying unrelated repository files. Preserve
 
 The approved design is clear enough to implement with these defaults:
 
-- Use the LazyBros glasses image for the header logo, favicon, and mobile home screen icons.
+- Use `KakaoTalk_Photo_2026-05-31-14-16-55 004.png` for the header logo, favicon, and mobile home screen icons.
 - Do not publish a legal `terms.html` page until app-specific terms text is provided and approved.
 - Copy the design-system paybooc font files into the homepage repository unless the file size causes a practical problem during implementation.
