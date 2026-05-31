@@ -17,7 +17,7 @@
 - Create: `/Users/kunheekim/Lazybros/home/lazyparking/privacy_policy.html`
 - Create: `/Users/kunheekim/Lazybros/home/scripts/verify_static_site.sh`
 - Create: `/Users/kunheekim/Lazybros/home/.gitignore`
-- Copy: `/Users/kunheekim/Lazybros/design-components/design-components-all/font/*.ttf` to `/Users/kunheekim/Lazybros/home/assets/fonts/`
+- Copy: `/Users/kunheekim/Lazybros/design-components/design-components-all/font/paybooc *.ttf` to `/Users/kunheekim/Lazybros/home/assets/fonts/`
 - Preserve: `/Users/kunheekim/Lazybros/home/app-ads.txt`
 - Preserve: `/Users/kunheekim/Lazybros/home/google04098259f4b4bb7a.html`
 - Preserve: `/Users/kunheekim/Lazybros/home/lazyparking/privacy_policy.txt`
@@ -63,11 +63,10 @@ require_absent() {
 
 require_file "index.html"
 require_file "assets/css/styles.css"
-require_file "assets/fonts/NanumSquare_acL.ttf"
-require_file "assets/fonts/NanumSquare_acR.ttf"
-require_file "assets/fonts/NanumSquare_acB.ttf"
-require_file "assets/fonts/NanumSquare_acEB.ttf"
-require_file "assets/fonts/SourceCodePro-VariableFont_wght.ttf"
+require_file "assets/fonts/paybooc-Light.ttf"
+require_file "assets/fonts/paybooc-Medium.ttf"
+require_file "assets/fonts/paybooc-Bold.ttf"
+require_file "assets/fonts/paybooc-ExtraBold.ttf"
 require_file "lazyparking/privacy_policy.txt"
 require_file "lazyparking/privacy_policy.html"
 require_file "app-ads.txt"
@@ -122,11 +121,10 @@ Expected: `FAIL` with `Missing required file: index.html`.
 Run:
 
 ```bash
-cp /Users/kunheekim/Lazybros/design-components/design-components-all/font/NanumSquare_acL.ttf assets/fonts/
-cp /Users/kunheekim/Lazybros/design-components/design-components-all/font/NanumSquare_acR.ttf assets/fonts/
-cp /Users/kunheekim/Lazybros/design-components/design-components-all/font/NanumSquare_acB.ttf assets/fonts/
-cp /Users/kunheekim/Lazybros/design-components/design-components-all/font/NanumSquare_acEB.ttf assets/fonts/
-cp /Users/kunheekim/Lazybros/design-components/design-components-all/font/SourceCodePro-VariableFont_wght.ttf assets/fonts/
+cp "/Users/kunheekim/Lazybros/design-components/design-components-all/font/paybooc Light.ttf" assets/fonts/paybooc-Light.ttf
+cp "/Users/kunheekim/Lazybros/design-components/design-components-all/font/paybooc Medium.ttf" assets/fonts/paybooc-Medium.ttf
+cp "/Users/kunheekim/Lazybros/design-components/design-components-all/font/paybooc Bold.ttf" assets/fonts/paybooc-Bold.ttf
+cp "/Users/kunheekim/Lazybros/design-components/design-components-all/font/paybooc ExtraBold.ttf" assets/fonts/paybooc-ExtraBold.ttf
 ```
 
 - [ ] **Step 2: Create CSS token and layout system**
@@ -135,45 +133,43 @@ Create `assets/css/styles.css` with:
 
 ```css
 @font-face {
-  font-family: "LazyText";
-  src: url("../fonts/SourceCodePro-VariableFont_wght.ttf") format("truetype-variations"),
-       url("../fonts/SourceCodePro-VariableFont_wght.ttf") format("truetype");
-  font-weight: 200 900;
+  font-family: "Paybooc";
+  src: url("../fonts/paybooc-Light.ttf") format("truetype");
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
-  unicode-range: U+0020-007E, U+00A0-024F, U+2000-206F, U+20A0-20CF, U+2100-218F;
 }
 
 @font-face {
-  font-family: "LazyText";
-  src: url("../fonts/NanumSquare_acL.ttf") format("truetype");
-  font-weight: 300;
-  font-display: swap;
-  unicode-range: U+1100-11FF, U+3000-303F, U+3130-318F, U+AC00-D7A3;
-}
-
-@font-face {
-  font-family: "LazyText";
-  src: url("../fonts/NanumSquare_acR.ttf") format("truetype");
+  font-family: "Paybooc";
+  src: url("../fonts/paybooc-Medium.ttf") format("truetype");
   font-weight: 400;
+  font-style: normal;
   font-display: swap;
-  unicode-range: U+1100-11FF, U+3000-303F, U+3130-318F, U+AC00-D7A3;
 }
 
 @font-face {
-  font-family: "LazyText";
-  src: url("../fonts/NanumSquare_acB.ttf") format("truetype");
+  font-family: "Paybooc";
+  src: url("../fonts/paybooc-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Paybooc";
+  src: url("../fonts/paybooc-Bold.ttf") format("truetype");
   font-weight: 700;
+  font-style: normal;
   font-display: swap;
-  unicode-range: U+1100-11FF, U+3000-303F, U+3130-318F, U+AC00-D7A3;
 }
 
 @font-face {
-  font-family: "LazyText";
-  src: url("../fonts/NanumSquare_acEB.ttf") format("truetype");
+  font-family: "Paybooc";
+  src: url("../fonts/paybooc-ExtraBold.ttf") format("truetype");
   font-weight: 800;
+  font-style: normal;
   font-display: swap;
-  unicode-range: U+1100-11FF, U+3000-303F, U+3130-318F, U+AC00-D7A3;
 }
 
 :root {

@@ -159,7 +159,7 @@ The app-specific folder model must support separate terms for each app. For `주
 
 Brand:
 
-- Logo mark: a simple orange square/rounded mark with `L` or a lightweight LazyBros wordmark.
+- Logo mark: the LazyBros glasses image from `design-components-all/Lazybros_image`, reused for the header mark, browser tab icon, and mobile home screen icons.
 - Text: `LazyBros Company`
 
 Navigation:
@@ -235,24 +235,20 @@ Purpose:
 
 - Be the authoritative index for all LazyBros app policy documents.
 
-Initial app card:
+Initial featured app card:
 
 - App: `주차기록`
 - Slug: `lazyparking`
 - Summary: 위치 기반 주차 정보 서비스, 사진 촬영 및 갤러리 불러오기, AdMob 광고 안내 포함
-- Main action: `개인정보처리방침 열기`
+- Main actions: `개인정보처리방침`, `권한 안내`
 - Target: `/home/lazyparking/privacy_policy.html`
 
-Visible policy topics:
+Scalable app directory:
 
-1. 위치 정보
-   - 현재 위치 기반 주차 공간 탐색 및 안내를 위해 서비스 이용 중 처리합니다.
-2. 카메라
-   - 사용자가 사진 촬영 기능을 사용할 때 주차 위치 사진 기록을 위해 접근합니다.
-3. 사진 및 미디어
-   - 갤러리에서 주차 사진을 불러올 때 기기 내 사진 접근 권한을 사용합니다.
-4. Google AdMob
-   - 광고 제공을 위해 사용되며 기기 설정에서 맞춤형 광고를 거부할 수 있습니다.
+- Keep the orange featured app card for the primary or latest app.
+- Add a compact app directory beside or below the featured card.
+- Include app search, state/category filters, visible app count, app status, category, update date, and direct policy actions.
+- For `주차기록`, expose `개인정보`, `권한 안내`, and `광고 안내` links from the directory row.
 
 ### Footer
 
@@ -328,11 +324,10 @@ Recommended files:
 
 - `index.html`
 - `assets/css/styles.css`
-- `assets/fonts/NanumSquare_acL.ttf`
-- `assets/fonts/NanumSquare_acR.ttf`
-- `assets/fonts/NanumSquare_acB.ttf`
-- `assets/fonts/NanumSquare_acEB.ttf`
-- `assets/fonts/SourceCodePro-VariableFont_wght.ttf`
+- `assets/fonts/paybooc-Light.ttf`
+- `assets/fonts/paybooc-Medium.ttf`
+- `assets/fonts/paybooc-Bold.ttf`
+- `assets/fonts/paybooc-ExtraBold.ttf`
 - `lazyparking/privacy_policy.html`
 
 The site does not need a build step for version 1. A no-build static setup is easier to maintain and fits the current repository, which already contains static files.
@@ -357,10 +352,12 @@ Do not hardcode random colors outside the approved token set. The final CSS may 
 
 ### Font setup
 
-Use `LazyText` font-face behavior from the design system:
+Use `Paybooc` font-face behavior from the design system across the homepage and app policy pages:
 
-- Korean: NanumSquare_ac weights 300, 400, 700, 800.
-- English/numbers/symbols: Source Code Pro variable font.
+- Light: weight 300.
+- Medium: weights 400 and 500.
+- Bold: weight 700.
+- ExtraBold: weight 800.
 
 If font file size or licensing becomes a concern, fall back to system fonts for version 1. However, the preferred implementation is to copy the existing design-system font files into `assets/fonts/`.
 
@@ -371,7 +368,7 @@ Desktop:
 - Header: horizontal brand and nav.
 - Hero: two-column layout, text left and app/policy preview right.
 - Company cards: three columns.
-- Policy center: one large app card plus a two-column policy-topic grid.
+- Policy center: one large featured app card plus a compact searchable app policy directory.
 
 Mobile:
 
@@ -432,10 +429,10 @@ For each app, use a folder under the repository root:
   terms.html
 ```
 
-The homepage should maintain a visible list of apps and policy links. When adding a new app, update only:
+The homepage should maintain a visible searchable list of apps and policy links. When adding a new app, update only:
 
 - New app folder and policy files.
-- The app list section in `index.html`.
+- The app directory row in `index.html`.
 
 No database or CMS is needed.
 
@@ -477,6 +474,6 @@ When implementation begins, avoid modifying unrelated repository files. Preserve
 
 The approved design is clear enough to implement with these defaults:
 
-- Use a simple orange `L` mark for version 1.
+- Use the LazyBros glasses image for the header logo, favicon, and mobile home screen icons.
 - Do not publish a legal `terms.html` page until app-specific terms text is provided and approved.
-- Copy the design-system font files into the homepage repository unless the file size causes a practical problem during implementation.
+- Copy the design-system paybooc font files into the homepage repository unless the file size causes a practical problem during implementation.

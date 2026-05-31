@@ -5,13 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LazyBros Company</title>
   <meta name="description" content="LazyBros Company 공식 홈페이지와 앱별 개인정보처리방침 및 약관 안내 허브입니다.">
+  <meta name="theme-color" content="#ff7518">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png?v=003">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png?v=003">
+  <link rel="manifest" href="manifest.webmanifest?v=003">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <header class="site-header">
     <nav class="site-nav" aria-label="주요 메뉴">
       <a class="brand" href="#top" aria-label="LazyBros Company 홈">
-        <span class="brand-mark">L</span>
+        <span class="brand-mark" aria-hidden="true">
+          <img src="assets/icons/lazybros-glasses-logo.png?v=003" alt="">
+        </span>
         <span>LazyBros Company</span>
       </a>
       <div class="nav-links">
@@ -26,6 +32,9 @@
   <main id="top">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
+        <div class="hero-logo" aria-hidden="true">
+          <img src="assets/icons/lazybros-glasses-logo.png?v=003" alt="">
+        </div>
         <p class="eyebrow">Work smart, not hard</p>
         <h1 id="hero-title">생활 속 작은 불편을 가볍고 똑똑한 앱으로 바꿉니다.</h1>
         <p class="hero-text">
@@ -97,36 +106,80 @@
         </p>
       </div>
 
-      <div class="apps-layout">
+      <div class="policy-overview">
         <article class="policy-feature">
-          <div>
-            <p class="status-pill"><span aria-hidden="true"></span>주차기록</p>
+          <div class="policy-feature-main">
+            <div class="policy-feature-logo" aria-hidden="true">
+              <img src="assets/icons/lazybros-glasses-logo.png?v=003" alt="">
+            </div>
+            <p class="status-pill"><span aria-hidden="true"></span>대표 앱</p>
+            <strong class="featured-app-name">주차기록</strong>
             <h3>주차 정보를 기록하고 다시 찾기 쉽게 돕는 앱</h3>
             <p>
               위치 기반 주차 정보 서비스, 사진 촬영 및 갤러리 불러오기, Google AdMob 광고 안내를 포함합니다.
             </p>
           </div>
-          <a class="button" href="lazyparking/privacy_policy.html">개인정보처리방침 열기</a>
+          <div class="policy-feature-actions">
+            <a class="button" href="lazyparking/privacy_policy.html">개인정보처리방침</a>
+            <a class="button ghost" href="lazyparking/privacy_policy.html#items">권한 안내</a>
+          </div>
         </article>
 
-        <div class="policy-topic-grid" aria-label="주차기록 개인정보 처리 항목">
-          <article class="policy-topic">
-            <strong>위치 정보</strong>
-            <p>현재 위치 기반 주차 공간 탐색 및 안내를 위해 서비스 이용 중 처리합니다.</p>
-          </article>
-          <article class="policy-topic">
-            <strong>카메라</strong>
-            <p>사용자가 사진 촬영 기능을 사용할 때 주차 위치 사진 기록을 위해 접근합니다.</p>
-          </article>
-          <article class="policy-topic">
-            <strong>사진 및 미디어</strong>
-            <p>갤러리에서 주차 사진을 불러올 때 기기 내 사진 접근 권한을 사용합니다.</p>
-          </article>
-          <article class="policy-topic">
-            <strong>Google AdMob</strong>
-            <p>광고 제공을 위해 사용되며 기기 설정에서 맞춤형 광고를 거부할 수 있습니다.</p>
-          </article>
-        </div>
+        <section class="policy-directory" aria-labelledby="policy-directory-title">
+          <div class="policy-directory-head">
+            <div>
+              <p class="eyebrow">App Directory</p>
+              <h3 id="policy-directory-title">전체 앱 정책 목록</h3>
+            </div>
+            <div class="policy-stats" aria-label="정책 앱 현황">
+              <span>전체 <strong data-policy-count>1개 앱</strong></span>
+              <span>운영 중 <strong>1</strong></span>
+              <span>최근 업데이트 <strong>2025.05.18</strong></span>
+            </div>
+          </div>
+
+          <div class="policy-toolbar" aria-label="앱 정책 검색 및 필터">
+            <input
+              class="policy-search"
+              type="search"
+              placeholder="앱 이름 또는 정책 키워드 검색"
+              aria-label="앱 정책 검색"
+              data-policy-search
+            >
+            <div class="policy-filter-group" aria-label="앱 상태 필터">
+              <button class="policy-filter is-active" type="button" data-policy-filter="all" aria-pressed="true">전체</button>
+              <button class="policy-filter" type="button" data-policy-filter="active" aria-pressed="false">운영 중</button>
+              <button class="policy-filter" type="button" data-policy-filter="records" aria-pressed="false">기록</button>
+              <button class="policy-filter" type="button" data-policy-filter="ads" aria-pressed="false">광고</button>
+            </div>
+          </div>
+
+          <div class="policy-app-list" aria-live="polite">
+            <article
+              class="policy-app-row"
+              data-policy-app
+              data-status="active"
+              data-categories="records ads permissions"
+              data-keywords="주차기록 주차 정보 위치 카메라 사진 갤러리 Google AdMob 광고 권한 개인정보처리방침"
+            >
+              <div class="policy-app-main">
+                <div class="policy-app-title-row">
+                  <strong>주차기록</strong>
+                  <span class="policy-app-status">운영 중</span>
+                  <span class="policy-app-category">생활 · 기록</span>
+                </div>
+                <p>주차 위치, 사진, 메모를 기록하고 다시 찾기 쉽게 돕는 앱</p>
+                <span class="policy-app-date">최근 업데이트: 2025.05.18</span>
+              </div>
+              <div class="policy-actions">
+                <a class="primary" href="lazyparking/privacy_policy.html">개인정보</a>
+                <a href="lazyparking/privacy_policy.html#items">권한 안내</a>
+                <a href="lazyparking/privacy_policy.html#ads">광고 안내</a>
+              </div>
+            </article>
+            <p class="policy-empty" data-policy-empty hidden>조건에 맞는 앱 정책이 없습니다.</p>
+          </div>
+        </section>
       </div>
     </section>
 
@@ -154,5 +207,55 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    (() => {
+      const searchInput = document.querySelector("[data-policy-search]");
+      const filterButtons = Array.from(document.querySelectorAll("[data-policy-filter]"));
+      const policyApps = Array.from(document.querySelectorAll("[data-policy-app]"));
+      const count = document.querySelector("[data-policy-count]");
+      const empty = document.querySelector("[data-policy-empty]");
+
+      if (!searchInput || !filterButtons.length || !policyApps.length || !count || !empty) {
+        return;
+      }
+
+      const normalize = (value) => value.toLocaleLowerCase("ko-KR").replace(/\s+/g, "");
+
+      const filterPolicyApps = () => {
+        const activeFilter = filterButtons.find((button) => button.getAttribute("aria-pressed") === "true")?.dataset.policyFilter || "all";
+        const query = normalize(searchInput.value);
+        let visibleCount = 0;
+
+        policyApps.forEach((app) => {
+          const haystack = normalize(`${app.textContent || ""} ${app.dataset.keywords || ""}`);
+          const statusMatch = activeFilter === "all" || app.dataset.status === activeFilter || (app.dataset.categories || "").split(" ").includes(activeFilter);
+          const queryMatch = !query || haystack.includes(query);
+          const visible = statusMatch && queryMatch;
+          app.hidden = !visible;
+          if (visible) {
+            visibleCount += 1;
+          }
+        });
+
+        count.textContent = `${visibleCount}개 앱`;
+        empty.hidden = visibleCount !== 0;
+      };
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          filterButtons.forEach((item) => {
+            const active = item === button;
+            item.classList.toggle("is-active", active);
+            item.setAttribute("aria-pressed", String(active));
+          });
+          filterPolicyApps();
+        });
+      });
+
+      searchInput.addEventListener("input", filterPolicyApps);
+      filterPolicyApps();
+    })();
+  </script>
 </body>
 </html>
