@@ -169,6 +169,7 @@ Navigation:
 - Contact
 
 The shared header stays fixed at the top while scrolling on both the homepage and app policy pages. Anchor links include enough scroll offset so section titles remain visible below the header.
+App policy pages use the same three top-level menu items as the homepage; plain-text policy files remain available by direct URL but are not shown as a header menu item.
 
 Behavior:
 
