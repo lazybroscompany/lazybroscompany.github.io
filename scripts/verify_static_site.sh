@@ -53,6 +53,8 @@ require_file "assets/icons/icon-512.png"
 require_file "manifest.webmanifest"
 require_file "lazyparking/privacy_policy.txt"
 require_file "lazyparking/privacy_policy.html"
+require_file "lazymosquito/customer_notice_ko.txt"
+require_file "lazymosquito/privacy_policy.html"
 require_file "app-ads.txt"
 require_file "google04098259f4b4bb7a.html"
 
@@ -72,6 +74,8 @@ require_text "index.html" "assets/icons/lazybros-policy-logo.png?v=003"
 require_absent "index.html" 'class="hero-logo"'
 require_text "index.html" "생활 속 작은 불편을 가볍고 똑똑한 앱으로 바꿉니다."
 require_text "index.html" "주차기록"
+require_text "index.html" "모기퇴치"
+require_text "index.html" "고주파 음파"
 require_text "index.html" 'class="policy-directory"'
 require_text "index.html" 'data-policy-search'
 require_text "index.html" 'data-policy-filter="all"'
@@ -80,9 +84,16 @@ require_text "index.html" 'data-policy-count'
 require_text "index.html" 'data-policy-empty'
 require_text "index.html" "전체 앱 정책 목록"
 require_text "index.html" "최근 업데이트: 2025.05.18"
+require_text "index.html" "2개 앱"
+require_text "index.html" "2026.06.08"
 require_text "index.html" "광고 안내"
 require_text "index.html" "filterPolicyApps"
 require_text "index.html" "lazyparking/privacy_policy.html"
+require_text "index.html" "lazymosquito/privacy_policy.html"
+require_text "index.html" "lazymosquito/privacy_policy.html#terms"
+require_text "index.html" "lazymosquito/privacy_policy.html#privacy"
+require_text "index.html" "lazymosquito/privacy_policy.html#permissions"
+require_text "index.html" "lazymosquito/privacy_policy.html#data-deletion"
 require_text "index.html" "LazyBros Company | lazybroscompany@gmail.com"
 require_text "index.html" "Lazy doesn't mean Stupid"
 require_text "index.html" 'class="contact-copy"'
@@ -154,5 +165,29 @@ require_text "lazyparking/privacy_policy.html" "Google AdMob"
 require_text "lazyparking/privacy_policy.html" "https://policies.google.com/privacy"
 require_text "lazyparking/privacy_policy.html" "회사 서버로 전송되지 않음"
 require_text "lazyparking/privacy_policy.html" "lazybroscompany@gmail.com"
+
+require_text "lazymosquito/privacy_policy.html" '<html lang="ko">'
+require_text "lazymosquito/privacy_policy.html" 'rel="icon"'
+require_text "lazymosquito/privacy_policy.html" 'rel="apple-touch-icon"'
+require_text "lazymosquito/privacy_policy.html" 'rel="manifest"'
+require_text "lazymosquito/privacy_policy.html" "../assets/icons/favicon-32.png?v=004"
+require_text "lazymosquito/privacy_policy.html" "../assets/icons/apple-touch-icon.png?v=004"
+require_text "lazymosquito/privacy_policy.html" "../manifest.webmanifest?v=004"
+require_text "lazymosquito/privacy_policy.html" "../assets/icons/lazybros-glasses-logo.png?v=004"
+require_text "lazymosquito/privacy_policy.html" "../index.html#company"
+require_text "lazymosquito/privacy_policy.html" "../index.html#policies"
+require_text "lazymosquito/privacy_policy.html" "../index.html#contact"
+require_text "lazymosquito/privacy_policy.html" "모기퇴치 이용약관 및 개인정보 처리방침"
+require_text "lazymosquito/privacy_policy.html" "시행일: 2026년 6월 8일"
+require_text "lazymosquito/privacy_policy.html" "com.lazybros.lazymosquito"
+require_text "lazymosquito/privacy_policy.html" "고주파 음파"
+require_text "lazymosquito/privacy_policy.html" "모기 퇴치 효과"
+require_text "lazymosquito/privacy_policy.html" "특정한 방충 효과를 보증하지 않습니다"
+require_text "lazymosquito/privacy_policy.html" "음성, 대화 또는 주변 소리를 녹음하는 기능을 제공하지 않습니다"
+require_text "lazymosquito/privacy_policy.html" "회사 서버로 전송하지 않습니다"
+require_text "lazymosquito/privacy_policy.html" "Google AdMob"
+require_text "lazymosquito/privacy_policy.html" "https://policies.google.com/privacy"
+require_text "lazymosquito/privacy_policy.html" "데이터 삭제 안내"
+require_text "lazymosquito/privacy_policy.html" "lazybroscompany@gmail.com"
 
 echo "Static site verification passed."
